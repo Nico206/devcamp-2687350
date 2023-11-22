@@ -6,11 +6,11 @@ const BootcampSchema = mongoose.Schema({
         required: [true,
              "el nombre es requerido"],
         unique: true, 
-        maxlength: [50, "nombre de bootcamp no mayor a 50 caracteres"]
+        maxlength: [20, "nombre de bootcamp no mayor a 20 caracteres"]
     },
     phone:{
         type: Number,
-        maxlength: [10, "telefono de bootcamp no mayor a 10 digitos"]
+        max: [9999999999, "telefono de bootcamp no mayor a 10 digitos"]
     },
     address:{
         type:String,
