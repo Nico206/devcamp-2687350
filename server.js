@@ -4,6 +4,7 @@ const colors = require ('colors')
 const connectDB = require ('./config/db')
 const  bootcampsRoutes = require ('./routes/bootcampsRoutes')
 const coursesRoutes = require('./routes/coursesRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 //establecer config
 
@@ -35,6 +36,11 @@ app.use('/bootcamps',
 // Uri de Cursos
 app.use('/courses',
     coursesRoutes)
+
+
+
+// Uri de Users
+app.use('/auth' , userRoutes)
 
 
 
